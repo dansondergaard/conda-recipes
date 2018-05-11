@@ -1,0 +1,18 @@
+package:
+  name: seql
+  version: "1.0.0"
+
+source:
+  git_url: https://github.com/heerme/seql-sequence-learner.git
+  git_rev: e6dd715
+
+build:
+  number: 2
+
+requirements:
+  build:
+    - gcc
+
+app:
+  summary: "Sequence classification in all-subsequence space"
+  license: GPL2
