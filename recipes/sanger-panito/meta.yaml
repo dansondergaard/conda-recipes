@@ -1,0 +1,19 @@
+package:
+  name: sanger-panito
+  version: "0.0.2b1"
+
+source:
+  git_url: https://github.com/sanger-pathogens/panito.git
+  git_rev: 40b359d
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - gcc
+
+app:
+  summary: "Calculate genome wide average nucleotide identity (gwANI) for a multiFASTA alignment."
+  license: GPL3
+
