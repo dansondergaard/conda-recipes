@@ -1,0 +1,21 @@
+package:
+    name: raxml-ng
+    version: 0.6.0
+
+source:
+    fn: raxml-ng.zip
+    md5: 7c0412b1c053781b7c5a5c5d3c7b9dcc
+    url: https://github.com/amkozlov/raxml-ng/releases/download/0.6.0/raxml-ng_v0.6.0_linux_x86_64.zip
+
+build:
+    number: '0'
+
+test:
+    commands:
+        - raxml-ng -h
+
+about:
+    home: https://github.com/amkozlov/raxml-ng
+    license: 'GNU Affero General Public License version 3'
+    summary: RAxML-NG is a phylogenetic tree inference tool which uses maximum-likelihood (ML) optimality criterion.
+
