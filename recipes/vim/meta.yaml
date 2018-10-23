@@ -1,0 +1,28 @@
+{% set version = "8.1.0332" %}
+{% set md5 = "fb0f4c624df141a68ed4c621d10a7b02" %}
+
+package:
+  name: vim
+  version: "{{ version }}"
+
+source:
+  fn: "v{{ version }}.tar.gz"
+  url: "https://github.com/vim/vim/archive/v{{ version }}.tar.gz"
+  md5: "{{ md5 }}"
+
+requirements:
+  build:
+    - gettext
+    - python {{ python }}
+    - patchelf
+  run:
+    - gettext
+    - python {{ python }}
+
+test:
+  commands:
+    - vim --version
+
+about:
+  home: http://www.vim.org/
+  license: GPL
