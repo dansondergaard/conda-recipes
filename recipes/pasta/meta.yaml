@@ -1,0 +1,46 @@
+package:
+    name: pasta
+    version: 1.8.2
+source:
+    fn: pasta.zip
+    md5: 89f1460dc93f904ce101940c753b6267
+    url: https://github.com/smirarab/pasta/archive/693a46533cf61ef92dc24771b576e42de2eb2ed8.zip
+
+build:
+    number: '2'
+
+requirements:
+    build:
+        - certifi 2016.9.26
+        - dendropy 4.1.0
+        - gcc
+        - gnu-wget
+        - java-jdk >=6
+        - pcre
+        - python >=2.7
+        - pymongo 3.3.0
+    run:
+        - dendropy 4.1.0
+        - java-jdk >=6
+        - libgcc
+        - pcre
+        - python >=2.7
+        - pymongo 3.3.0
+test:
+    commands:
+        - clustalw2 -help | grep OPTIONS
+        - hmmalign -h | grep HMMER
+        - hmmbuild -h | grep HMMER
+        - muscle -version | grep MUSCLE
+        - prank -help | grep prank
+        - raxml -h | grep raxmlHPC
+        - raxmlp -h | grep raxmlHPC
+    imports:
+        - pasta
+
+about:
+    home: https://github.com/smirarab/pasta
+    license: GNU General Public License v3 or later (GPLv3+)
+    summary: An implementation of the PASTA (Practical Alignment using Sate and TrAnsitivity)
+        algorithm
+
